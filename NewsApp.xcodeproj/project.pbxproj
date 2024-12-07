@@ -10,7 +10,6 @@
 		A36DAAF82D03B2DA00EDCA4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAAF72D03B2DA00EDCA4B /* AppDelegate.swift */; };
 		A36DAAFA2D03B2DA00EDCA4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAAF92D03B2DA00EDCA4B /* SceneDelegate.swift */; };
 		A36DAAFC2D03B2DA00EDCA4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAAFB2D03B2DA00EDCA4B /* ViewController.swift */; };
-		A36DAAFF2D03B2DA00EDCA4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DAAFD2D03B2DA00EDCA4B /* Main.storyboard */; };
 		A36DAB012D03B2DC00EDCA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A36DAB002D03B2DC00EDCA4B /* Assets.xcassets */; };
 		A36DAB042D03B2DC00EDCA4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DAB022D03B2DC00EDCA4B /* LaunchScreen.storyboard */; };
 		A36DAB0F2D03B2DD00EDCA4B /* NewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB0E2D03B2DD00EDCA4B /* NewsAppTests.swift */; };
@@ -18,6 +17,9 @@
 		A36DAB1B2D03B2DD00EDCA4B /* NewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB1A2D03B2DD00EDCA4B /* NewsAppUITestsLaunchTests.swift */; };
 		A36DAB292D03BBFE00EDCA4B /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB282D03BBFE00EDCA4B /* NewsArticle.swift */; };
 		A36DAB2D2D03C12700EDCA4B /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB2C2D03C12700EDCA4B /* NewsListViewModel.swift */; };
+		A36DAB2F2D03C38100EDCA4B /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB2E2D03C38100EDCA4B /* NewsListViewController.swift */; };
+		A36DAB322D03C48300EDCA4B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A36DAB312D03C48300EDCA4B /* SnapKit */; };
+		A36DAB342D03C48300EDCA4B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A36DAB332D03C48300EDCA4B /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,6 @@
 		A36DAAF72D03B2DA00EDCA4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DAAF92D03B2DA00EDCA4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A36DAAFB2D03B2DA00EDCA4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A36DAAFE2D03B2DA00EDCA4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A36DAB002D03B2DC00EDCA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A36DAB032D03B2DC00EDCA4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A36DAB052D03B2DC00EDCA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		A36DAB1A2D03B2DD00EDCA4B /* NewsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A36DAB282D03BBFE00EDCA4B /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		A36DAB2C2D03C12700EDCA4B /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
+		A36DAB2E2D03C38100EDCA4B /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36DAB322D03C48300EDCA4B /* SnapKit in Frameworks */,
+				A36DAB342D03C48300EDCA4B /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +113,6 @@
 				A36DAB2B2D03BD5100EDCA4B /* ViewModels */,
 				A36DAB2A2D03BD4900EDCA4B /* Views */,
 				A36DAB272D03BBE300EDCA4B /* Models */,
-				A36DAAFD2D03B2DA00EDCA4B /* Main.storyboard */,
 				A36DAB002D03B2DC00EDCA4B /* Assets.xcassets */,
 				A36DAB022D03B2DC00EDCA4B /* LaunchScreen.storyboard */,
 				A36DAB052D03B2DC00EDCA4B /* Info.plist */,
@@ -145,6 +148,7 @@
 		A36DAB2A2D03BD4900EDCA4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A36DAB2E2D03C38100EDCA4B /* NewsListViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +177,10 @@
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+				A36DAB312D03C48300EDCA4B /* SnapKit */,
+				A36DAB332D03C48300EDCA4B /* SnapKit-Dynamic */,
+			);
 			productName = NewsApp;
 			productReference = A36DAAF42D03B2DA00EDCA4B /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +253,9 @@
 				Base,
 			);
 			mainGroup = A36DAAEB2D03B2DA00EDCA4B;
+			packageReferences = (
+				A36DAB302D03C48300EDCA4B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A36DAAF52D03B2DA00EDCA4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,7 +274,6 @@
 			files = (
 				A36DAB042D03B2DC00EDCA4B /* LaunchScreen.storyboard in Resources */,
 				A36DAB012D03B2DC00EDCA4B /* Assets.xcassets in Resources */,
-				A36DAAFF2D03B2DA00EDCA4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +301,7 @@
 				A36DAAFC2D03B2DA00EDCA4B /* ViewController.swift in Sources */,
 				A36DAB292D03BBFE00EDCA4B /* NewsArticle.swift in Sources */,
 				A36DAB2D2D03C12700EDCA4B /* NewsListViewModel.swift in Sources */,
+				A36DAB2F2D03C38100EDCA4B /* NewsListViewController.swift in Sources */,
 				A36DAAF82D03B2DA00EDCA4B /* AppDelegate.swift in Sources */,
 				A36DAAFA2D03B2DA00EDCA4B /* SceneDelegate.swift in Sources */,
 			);
@@ -329,14 +340,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A36DAAFD2D03B2DA00EDCA4B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A36DAAFE2D03B2DA00EDCA4B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A36DAB022D03B2DC00EDCA4B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -479,7 +482,7 @@
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,7 +510,7 @@
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -639,6 +642,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A36DAB302D03C48300EDCA4B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A36DAB312D03C48300EDCA4B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A36DAB302D03C48300EDCA4B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A36DAB332D03C48300EDCA4B /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A36DAB302D03C48300EDCA4B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A36DAAEC2D03B2DA00EDCA4B /* Project object */;
 }
