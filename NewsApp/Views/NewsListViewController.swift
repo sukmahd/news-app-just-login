@@ -38,7 +38,7 @@ class NewsListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(NewsListTableViewCell.self, forCellReuseIdentifier: "Cell")
         
         view.addSubview(tableView)
         
@@ -56,7 +56,7 @@ class NewsListViewController: UIViewController {
 // MARK: - TableView Delegate & Data Source
 extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfArticles
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

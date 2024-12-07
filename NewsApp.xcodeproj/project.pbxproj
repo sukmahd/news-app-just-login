@@ -20,6 +20,7 @@
 		A36DAB2F2D03C38100EDCA4B /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB2E2D03C38100EDCA4B /* NewsListViewController.swift */; };
 		A36DAB322D03C48300EDCA4B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A36DAB312D03C48300EDCA4B /* SnapKit */; };
 		A36DAB342D03C48300EDCA4B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A36DAB332D03C48300EDCA4B /* SnapKit-Dynamic */; };
+		A36DAB362D03D31C00EDCA4B /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB352D03D31C00EDCA4B /* NewsListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A36DAB282D03BBFE00EDCA4B /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		A36DAB2C2D03C12700EDCA4B /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		A36DAB2E2D03C38100EDCA4B /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		A36DAB352D03D31C00EDCA4B /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				A36DAB2E2D03C38100EDCA4B /* NewsListViewController.swift */,
+				A36DAB352D03D31C00EDCA4B /* NewsListTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				A36DAB2D2D03C12700EDCA4B /* NewsListViewModel.swift in Sources */,
 				A36DAB2F2D03C38100EDCA4B /* NewsListViewController.swift in Sources */,
 				A36DAAF82D03B2DA00EDCA4B /* AppDelegate.swift in Sources */,
+				A36DAB362D03D31C00EDCA4B /* NewsListTableViewCell.swift in Sources */,
 				A36DAAFA2D03B2DA00EDCA4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
