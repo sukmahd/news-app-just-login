@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class NewsListTableViewCell: UITableViewCell {
     private var contentImageView: UIImageView = {
@@ -78,5 +79,12 @@ class NewsListTableViewCell: UITableViewCell {
             make.trailing.equalToSuperview().inset(16)
             make.top.bottom.equalToSuperview().inset(8)
         }
+    }
+    
+    public func configCell(with data: NewsArticle) {
+        titleLabel.text = data.slug
+        descriptionLabel.text = data.title
+        timeStapmLabel.text = data.updatedAt
+        contentImageView.kf.setImage(with: URL(string: data.thumbnail ?? ""))
     }
 }

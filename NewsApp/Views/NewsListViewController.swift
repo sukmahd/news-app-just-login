@@ -30,6 +30,7 @@ class NewsListViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupViewModel()
+        viewModel.fetchNews()
     }
     
     private func setupUI() {
@@ -49,18 +50,32 @@ class NewsListViewController: UIViewController {
     }
 
     private func setupViewModel() {
-        
+        viewModel.delegate = self
     }
 }
 
 // MARK: - TableView Delegate & Data Source
 extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.numberOfArticles
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsListTableViewCell
+        if let article = viewModel.getArticle(at: indexPath.row) {
+            cell.configCell(with: article)
+        }
         return cell
+    }
+}
+
+//MARK: - viewModel Delegate
+extension NewsListViewController: NewsListViewModelDelegate {
+    func didUpdateData() {
+        tableView.reloadData()
+    }
+    
+    func didError(error: String) {
+        //todo: Show Error
     }
 }

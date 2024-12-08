@@ -21,6 +21,9 @@
 		A36DAB322D03C48300EDCA4B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A36DAB312D03C48300EDCA4B /* SnapKit */; };
 		A36DAB342D03C48300EDCA4B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A36DAB332D03C48300EDCA4B /* SnapKit-Dynamic */; };
 		A36DAB362D03D31C00EDCA4B /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB352D03D31C00EDCA4B /* NewsListTableViewCell.swift */; };
+		A36DAB392D03E99500EDCA4B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A36DAB382D03E99500EDCA4B /* Kingfisher */; };
+		A36DAB3C2D0653F900EDCA4B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB3B2D0653F900EDCA4B /* NetworkManager.swift */; };
+		A36DAB3F2D06572400EDCA4B /* NewsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB3E2D06572400EDCA4B /* NewsServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,8 @@
 		A36DAB2C2D03C12700EDCA4B /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		A36DAB2E2D03C38100EDCA4B /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		A36DAB352D03D31C00EDCA4B /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
+		A36DAB3B2D0653F900EDCA4B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A36DAB3E2D06572400EDCA4B /* NewsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36DAB392D03E99500EDCA4B /* Kingfisher in Frameworks */,
 				A36DAB322D03C48300EDCA4B /* SnapKit in Frameworks */,
 				A36DAB342D03C48300EDCA4B /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -112,6 +118,8 @@
 				A36DAAF72D03B2DA00EDCA4B /* AppDelegate.swift */,
 				A36DAAF92D03B2DA00EDCA4B /* SceneDelegate.swift */,
 				A36DAAFB2D03B2DA00EDCA4B /* ViewController.swift */,
+				A36DAB3D2D06570700EDCA4B /* Service */,
+				A36DAB3A2D0653E100EDCA4B /* Utils */,
 				A36DAB2B2D03BD5100EDCA4B /* ViewModels */,
 				A36DAB2A2D03BD4900EDCA4B /* Views */,
 				A36DAB272D03BBE300EDCA4B /* Models */,
@@ -164,6 +172,22 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		A36DAB3A2D0653E100EDCA4B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A36DAB3B2D0653F900EDCA4B /* NetworkManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A36DAB3D2D06570700EDCA4B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A36DAB3E2D06572400EDCA4B /* NewsServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +207,7 @@
 			packageProductDependencies = (
 				A36DAB312D03C48300EDCA4B /* SnapKit */,
 				A36DAB332D03C48300EDCA4B /* SnapKit-Dynamic */,
+				A36DAB382D03E99500EDCA4B /* Kingfisher */,
 			);
 			productName = NewsApp;
 			productReference = A36DAAF42D03B2DA00EDCA4B /* NewsApp.app */;
@@ -258,6 +283,7 @@
 			mainGroup = A36DAAEB2D03B2DA00EDCA4B;
 			packageReferences = (
 				A36DAB302D03C48300EDCA4B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A36DAB372D03E99500EDCA4B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = A36DAAF52D03B2DA00EDCA4B /* Products */;
 			projectDirPath = "";
@@ -305,9 +331,11 @@
 				A36DAB292D03BBFE00EDCA4B /* NewsArticle.swift in Sources */,
 				A36DAB2D2D03C12700EDCA4B /* NewsListViewModel.swift in Sources */,
 				A36DAB2F2D03C38100EDCA4B /* NewsListViewController.swift in Sources */,
+				A36DAB3C2D0653F900EDCA4B /* NetworkManager.swift in Sources */,
 				A36DAAF82D03B2DA00EDCA4B /* AppDelegate.swift in Sources */,
 				A36DAB362D03D31C00EDCA4B /* NewsListTableViewCell.swift in Sources */,
 				A36DAAFA2D03B2DA00EDCA4B /* SceneDelegate.swift in Sources */,
+				A36DAB3F2D06572400EDCA4B /* NewsServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +684,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		A36DAB372D03E99500EDCA4B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -668,6 +704,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A36DAB302D03C48300EDCA4B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		A36DAB382D03E99500EDCA4B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A36DAB372D03E99500EDCA4B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

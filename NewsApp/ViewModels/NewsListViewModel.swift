@@ -7,9 +7,21 @@
 
 import Foundation
 
+protocol NewsListViewModelDelegate: AnyObject {
+    func didUpdateData()
+    func didError(error: String)
+}
+
 class NewsListViewModel {
     // MARK: - Properties
     private var articles: [NewsArticle] = []
+    private let serviceProvider: NewsServiceProtocol
+    weak var delegate: NewsListViewModelDelegate?
+    
+    init(serviceProvider: NewsServiceProtocol, delegate: NewsListViewModelDelegate? = nil) {
+        self.serviceProvider = serviceProvider
+        self.delegate = delegate
+    }
     
     var numberOfArticles: Int {
         return articles.count
@@ -21,6 +33,18 @@ class NewsListViewModel {
     }
     
     func fetchNews() {
-        
+        serviceProvider.getNewsArticle { [weak self] result in
+            switch result {
+            case .success(let articles):
+                DispatchQueue.main.async {
+                    self?.articles = articles
+                    self?.delegate?.didUpdateData()
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.delegate?.didError(error: error.localizedDescription)
+                }
+            }
+        }
     }
 }
