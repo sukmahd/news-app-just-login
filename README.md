@@ -9,7 +9,13 @@ A simple iOS news application built with UIKit that displays news articles from 
 
 ## Screenshots
 
-[Add your app screenshots here]
+### News List Screen
+
+![News List Screen](ScreenShot/ss1.png)
+
+### News Detail Screen
+
+![News Detail Screen](ScreenShot/ss2.png)
 
 ## Requirements
 
@@ -38,6 +44,7 @@ This project uses the following dependencies:
 # Architecture
 
 The project follows a clean architecture pattern with:
+
 - MVVM (Model-View-ViewModel) design pattern
 - Programmatic UI using UIKit
 - Network layer for API communication
@@ -45,24 +52,29 @@ The project follows a clean architecture pattern with:
 ## Testing
 
 The project includes comprehensive unit tests covering:
+
 - ViewModels
 
 To run the tests:
+
 1. Open the project in Xcode
 2. Press `⌘ + U` or navigate to Product → Test
 3. View test results in the Test Navigator
 
 Test coverage includes:
+
 - ViewModel business logic
 
 ## API
 
 The app fetches news data from:
+
 - Endpoint: [https://jsonplaceholder.org/posts](https://jsonplaceholder.org/posts)
 
 ## Screens
 
 1. News List Screen
+
    - Displays a list of news articles
    - Shows thumbnail, title, and brief content
    - Implements UITableView for efficient scrolling
