@@ -12,6 +12,7 @@ import SnapKit
 class NewsListViewController: UIViewController {
     private let viewModel: NewsListViewModel
     
+    let defaultIdentifier = "defaultIdentifier"
     private let tableView: UITableView = {
         let tableView = UITableView()
         return tableView
@@ -39,7 +40,7 @@ class NewsListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(NewsListTableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(NewsListTableViewCell.self, forCellReuseIdentifier: NewsListTableViewCell.identifier)
         
         view.addSubview(tableView)
         
@@ -52,6 +53,12 @@ class NewsListViewController: UIViewController {
     private func setupViewModel() {
         viewModel.delegate = self
     }
+    
+    private func showError(with error: String) {
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - TableView Delegate & Data Source
@@ -61,7 +68,10 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsListTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsListTableViewCell.identifier, for: indexPath) as? NewsListTableViewCell else {
+            let defaultCell = tableView.dequeueReusableCell(withIdentifier: defaultIdentifier, for: indexPath)
+            return defaultCell
+        }
         if let article = viewModel.getArticle(at: indexPath.row) {
             cell.configCell(with: article)
         }
@@ -70,9 +80,10 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let selectedNews = viewModel.getArticle(at: indexPath.row) else {
-            //todo show error
+            showError(with: "Article Not Found")
             return
         }
+
         navigationController?.pushViewController(NewsListDetailViewController(viewModel: NewsDetailViewModel(article: selectedNews)), animated: true)
     }
 }
@@ -84,6 +95,6 @@ extension NewsListViewController: NewsListViewModelDelegate {
     }
     
     func didError(error: String) {
-        //todo: Show Error
+        showError(with: error)
     }
 }

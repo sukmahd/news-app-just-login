@@ -10,6 +10,8 @@ import UIKit
 import Kingfisher
 
 class NewsListTableViewCell: UITableViewCell {
+    static let identifier: String = "NewsListCellIdentifier"
+    
     private var contentImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
