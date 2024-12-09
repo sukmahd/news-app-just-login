@@ -26,6 +26,9 @@
 		A36DAB3F2D06572400EDCA4B /* NewsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB3E2D06572400EDCA4B /* NewsServiceProtocol.swift */; };
 		A36DAB412D065DE300EDCA4B /* NewsListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB402D065DE300EDCA4B /* NewsListDetailViewController.swift */; };
 		A36DAB432D06680000EDCA4B /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB422D06680000EDCA4B /* NewsDetailViewModel.swift */; };
+		A36DAB452D06DA7A00EDCA4B /* TestNewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB442D06DA7A00EDCA4B /* TestNewsListViewModel.swift */; };
+		A36DAB472D06DAF200EDCA4B /* MockNewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB462D06DAF200EDCA4B /* MockNewsService.swift */; };
+		A36DAB612D06DDC400EDCA4B /* MockNewsListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB602D06DDC400EDCA4B /* MockNewsListViewModelDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		A36DAB3E2D06572400EDCA4B /* NewsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceProtocol.swift; sourceTree = "<group>"; };
 		A36DAB402D065DE300EDCA4B /* NewsListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListDetailViewController.swift; sourceTree = "<group>"; };
 		A36DAB422D06680000EDCA4B /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
+		A36DAB442D06DA7A00EDCA4B /* TestNewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNewsListViewModel.swift; sourceTree = "<group>"; };
+		A36DAB462D06DAF200EDCA4B /* MockNewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsService.swift; sourceTree = "<group>"; };
+		A36DAB602D06DDC400EDCA4B /* MockNewsListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListViewModelDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				A36DAB0E2D03B2DD00EDCA4B /* NewsAppTests.swift */,
+				A36DAB462D06DAF200EDCA4B /* MockNewsService.swift */,
+				A36DAB602D06DDC400EDCA4B /* MockNewsListViewModelDelegate.swift */,
+				A36DAB442D06DA7A00EDCA4B /* TestNewsListViewModel.swift */,
 			);
 			path = NewsAppTests;
 			sourceTree = "<group>";
@@ -351,7 +360,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36DAB612D06DDC400EDCA4B /* MockNewsListViewModelDelegate.swift in Sources */,
 				A36DAB0F2D03B2DD00EDCA4B /* NewsAppTests.swift in Sources */,
+				A36DAB472D06DAF200EDCA4B /* MockNewsService.swift in Sources */,
+				A36DAB452D06DA7A00EDCA4B /* TestNewsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

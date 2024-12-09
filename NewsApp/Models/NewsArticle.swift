@@ -51,4 +51,32 @@ struct NewsArticle: Codable {
         self.updatedAt = try container.decodeIfPresent(String.self, forKey: .updatedAt) ?? "-"
         self.userId = try container.decodeIfPresent(Int.self, forKey: .userId) ?? 0
     }
+    
+    init(
+            id: Int,
+            slug: String,
+            url: String,
+            title: String,
+            content: String,
+            image: String,
+            thumbnail: String,
+            status: String,
+            category: String,
+            publishedAt: String,
+            updatedAt: String,
+            userId: Int
+        ) {
+            self.id = id
+            self.slug = slug
+            self.url = url
+            self.title = title
+            self.content = content
+            self.image = image
+            self.thumbnail = thumbnail
+            self.status = status
+            self.category = category
+            self.publishedAt = publishedAt
+            self.updatedAt = updatedAt
+            self.userId = userId
+        }
 }
