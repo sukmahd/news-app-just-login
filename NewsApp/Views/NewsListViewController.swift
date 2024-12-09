@@ -13,6 +13,8 @@ class NewsListViewController: UIViewController {
     private let viewModel: NewsListViewModel
     
     let defaultIdentifier = "defaultIdentifier"
+    private let activityIndicator = UIActivityIndicatorView(style: .medium)
+
     private let tableView: UITableView = {
         let tableView = UITableView()
         return tableView
@@ -37,6 +39,8 @@ class NewsListViewController: UIViewController {
     private func setupUI() {
         title = "News"
         view.backgroundColor = .white
+        tableView.backgroundView = activityIndicator
+        activityIndicator.startAnimating()
         
         tableView.delegate = self
         tableView.dataSource = self
