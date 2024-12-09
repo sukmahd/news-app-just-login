@@ -69,15 +69,18 @@ class NewsListTableViewCell: UITableViewCell {
         }
         
         contentImageView.snp.makeConstraints { make in
-            make.height.width.equalTo(120)
-            make.top.bottom.equalToSuperview().inset(8)
+            make.width.equalTo(120)  // Set fixed width
+            make.height.equalTo(contentImageView.snp.width)  // Make height equal to width
+            make.top.equalToSuperview().offset(8)  // Anchor to top
+            make.bottom.lessThanOrEqualToSuperview().inset(8)  // Allow bottom to expand
             make.leading.equalToSuperview().offset(16)
         }
         
         stackView.snp.makeConstraints { make in
             make.leading.equalTo(contentImageView.snp.trailing).offset(16)
             make.trailing.equalToSuperview().inset(16)
-            make.top.bottom.equalToSuperview().inset(8)
+            make.top.equalToSuperview().offset(8)
+            make.bottom.equalTo(contentImageView.snp.bottom)
         }
     }
     
@@ -85,6 +88,6 @@ class NewsListTableViewCell: UITableViewCell {
         titleLabel.text = data.slug
         descriptionLabel.text = data.title
         timeStapmLabel.text = data.updatedAt
-        contentImageView.kf.setImage(with: URL(string: data.thumbnail ?? ""))
+        contentImageView.kf.setImage(with: URL(string: data.thumbnail))
     }
 }

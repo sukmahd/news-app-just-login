@@ -67,6 +67,14 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedNews = viewModel.getArticle(at: indexPath.row) else {
+            //todo show error
+            return
+        }
+        navigationController?.pushViewController(NewsListDetailViewController(viewModel: NewsDetailViewModel(article: selectedNews)), animated: true)
+    }
 }
 
 //MARK: - viewModel Delegate

@@ -24,6 +24,8 @@
 		A36DAB392D03E99500EDCA4B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A36DAB382D03E99500EDCA4B /* Kingfisher */; };
 		A36DAB3C2D0653F900EDCA4B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB3B2D0653F900EDCA4B /* NetworkManager.swift */; };
 		A36DAB3F2D06572400EDCA4B /* NewsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB3E2D06572400EDCA4B /* NewsServiceProtocol.swift */; };
+		A36DAB412D065DE300EDCA4B /* NewsListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB402D065DE300EDCA4B /* NewsListDetailViewController.swift */; };
+		A36DAB432D06680000EDCA4B /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DAB422D06680000EDCA4B /* NewsDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		A36DAB352D03D31C00EDCA4B /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
 		A36DAB3B2D0653F900EDCA4B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A36DAB3E2D06572400EDCA4B /* NewsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceProtocol.swift; sourceTree = "<group>"; };
+		A36DAB402D065DE300EDCA4B /* NewsListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListDetailViewController.swift; sourceTree = "<group>"; };
+		A36DAB422D06680000EDCA4B /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				A36DAB2E2D03C38100EDCA4B /* NewsListViewController.swift */,
+				A36DAB402D065DE300EDCA4B /* NewsListDetailViewController.swift */,
 				A36DAB352D03D31C00EDCA4B /* NewsListTableViewCell.swift */,
 			);
 			path = Views;
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				A36DAB2C2D03C12700EDCA4B /* NewsListViewModel.swift */,
+				A36DAB422D06680000EDCA4B /* NewsDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,10 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36DAB412D065DE300EDCA4B /* NewsListDetailViewController.swift in Sources */,
 				A36DAAFC2D03B2DA00EDCA4B /* ViewController.swift in Sources */,
 				A36DAB292D03BBFE00EDCA4B /* NewsArticle.swift in Sources */,
 				A36DAB2D2D03C12700EDCA4B /* NewsListViewModel.swift in Sources */,
 				A36DAB2F2D03C38100EDCA4B /* NewsListViewController.swift in Sources */,
+				A36DAB432D06680000EDCA4B /* NewsDetailViewModel.swift in Sources */,
 				A36DAB3C2D0653F900EDCA4B /* NetworkManager.swift in Sources */,
 				A36DAAF82D03B2DA00EDCA4B /* AppDelegate.swift in Sources */,
 				A36DAB362D03D31C00EDCA4B /* NewsListTableViewCell.swift in Sources */,
